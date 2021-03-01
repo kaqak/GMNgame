@@ -42,11 +42,12 @@ document.querySelector('.check').addEventListener('click', function () {
 });
 
 document.querySelector('.again').addEventListener('click', function () {
-  document.body.style.backgroundColor = '';
-  document.querySelector('.message').textContent = `Guess the number!!!`;
-  secretNumber = Math.trunc(Math.random() * 20) + 1;
-  document.querySelector('.number').textContent = secretNumber;
-  document.querySelector('.guess').value = '';
   score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
   document.querySelector('.score').textContent = score;
+  document.querySelector('.message').textContent = `Guess the number!!!`;
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.guess').value = '';
+  document.body.style.backgroundColor = '';
+  document.querySelector('.number').style.width = '15rem';
 });
